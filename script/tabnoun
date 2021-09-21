@@ -281,7 +281,7 @@ _
 
 } # outside tab completion
 
-# ABSTRACT: A game played by shell tab completion
+# ABSTRACT: Select nouns from list of words, as fast as possible
 # PODNAME:
 
 =head1 SYNOPSIS
