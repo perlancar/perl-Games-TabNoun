@@ -85,9 +85,9 @@ sub gen_words {
 
     my @nouns = WordList::EN::Noun::TalkEnglish->new->pick(1);
     my @adjs  = WordList::EN::Adjective::TalkEnglish->new->pick(2);
-    my @advs  = WordList::EN::Adverbs::TalkEnglish->new->pick(2);
+    my @advs  = WordList::EN::Adverb::TalkEnglish->new->pick(2);
 
-    $State->{current_words} = List::Util::shuffle(@nouns, @adjs, @advs);
+    $State->{current_words} = [List::Util::shuffle(@nouns, @adjs, @advs)];
     $State->{current_word}  = $nouns[0];
     $State->{start_time} = undef;
     $State->{end_time}   = undef;
@@ -232,14 +232,18 @@ _
                        Lingua::EN::Numbers::Ordinate::ordinate($State->{num_completed_words}));
         if ($ARGV[0] eq $State->{current_word}) {
             print "You entered the $nth word in $dur sec(s).";
-            my $good_time = 1.5;
-            my $fair_time = 2.5;
+            my $excellent_time = 2;
+            my $good_time = 3;
+            my $fair_time = 4;
             my $bonus = 0;
-            if ($dur <= $good_time) {
+            if ($dur <= $excellent_time) {
                 $bonus = 50;
-                print " Good job!";
+                print " Excellect!";
+            } elsif ($dur <= $good_time) {
+                $bonus = 30;
+                print " Good, but could be even better next time.";
             } elsif ($dur <= $fair_time) {
-                $bonus = 25;
+                $bonus = 10;
                 print " Not bad, try better next time.";
             } else {
                 print " Too slow, really try better next time.";
