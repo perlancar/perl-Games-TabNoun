@@ -286,9 +286,88 @@ _
 
 =head1 SYNOPSIS
 
-To start playing the game:
+A sample session:
 
- % tabnoun <enter>
+ % tabnoun
+
+ Welcome to tabnoun, a game played with tab completion. You must first enable tab
+ completion for your shell. Here's how to do it in bash:
+
+     % complete -C tabnoun tabnoun
+
+ Or alternatively, install shcompgen from CPAN using 'cpanm -n App::shcompgen'.
+ For instructions on how to enable tab completion for other shells, see manpage.
+
+ The objective of the game is to select nouns 7 times as fast as possible, each
+ from a list of 5 words. For each noun, you type "tabnoun " then press Tab (Tab)
+ to see the list of words. You can now select the noun by typing it manually or
+ by completing it using tab completion. After that, press Enter to clock in your
+ time for the noun. Your points will be determined from how fast you entered the
+ noun. Do the same for the rest of the nouns to get the total score.
+
+ I'm ready to play! Are you? Type "tabnoun" and press Tab (Tab) to start.
+
+ % tabnoun
+ actually     altogether   competition  educational  electronic
+ % tabnoun competition
+ You entered the 1st word in 2.280 sec(s). Good, but could be even better next time. You get 80 points.
+
+ Ready for the next word? Type 'tabnoun <tab>' again.
+ % tabnoun
+ civil          educational    fully          improvement    unfortunately
+ % tabnoun improvement
+ You entered the 2nd word in 2.743 sec(s). Good, but could be even better next time. You get 80 points.
+
+ Ready for the next word? Type 'tabnoun <tab>' again.
+ % tabnoun
+ beer        eventually  latter      sufficient  totally
+ % tabnoun beer
+ You entered the 3rd word in 1.558 sec(s). Excellent! You get 100 points.
+
+ Ready for the next word? Type 'tabnoun <tab>' again.
+ % tabnoun
+ difficult    explanation  seriously    strongly     tiny
+ % tabnoun explanation
+ You entered the 4th word in 1.791 sec(s). Excellent! You get 100 points.
+
+ Ready for the next word? Type 'tabnoun <tab>' again.
+ % tabnoun
+ extremely     greatly       introduction  powerful      remarkable
+ % tabnoun introduction
+ You entered the 5th word in 2.118 sec(s). Good, but could be even better next time. You get 80 points.
+
+ Ready for the next word? Type 'tabnoun <tab>' again.
+ % tabnoun
+ childhood    consistent   equally      rather       responsible
+ % tabnoun childhood
+ You entered the 6th word in 2.595 sec(s). Good, but could be even better next time. You get 80 points.
+
+ Ready for the next word? Type 'tabnoun <tab>' again.
+ % tabnoun
+ asleep     expensive  likely     rarely     secretary
+ % tabnoun secretary
+ You entered the last word in 3.053 sec(s). Not bad, try better next time. You get 60 points.
+
+ Game over. Your total score for this game: 580.
+
+ Congratulations, you made the high scores list!
+
+ +------+-------+--------------------------+
+ | Name | Score | Time                     |
+ +------+-------+--------------------------+
+ | u1   | 610   | Tue Sep 21 17:40:25 2021 |
+ | u1   | 600   | Tue Sep 21 17:39:51 2021 |
+ | u1   | 600   | Tue Sep 21 17:42:34 2021 |
+ | u1   | 580   | Tue Sep 21 19:07:10 2021 |
+ | u1   | 560   | Tue Sep 21 17:42:01 2021 |
+ +------+-------+--------------------------+
+
+
+ To play another game, press 'tabnoun <tab>' again.
+
+A demo screencast:
+
+# IMAGE: share/images/screencast1.gif
 
 
 =head1 DESCRIPTION
