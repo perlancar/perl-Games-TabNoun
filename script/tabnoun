@@ -238,7 +238,7 @@ _
             my $bonus = 0;
             if ($dur <= $excellent_time) {
                 $bonus = 50;
-                print " Excellect!";
+                print " Excellent!";
             } elsif ($dur <= $good_time) {
                 $bonus = 30;
                 print " Good, but could be even better next time.";
